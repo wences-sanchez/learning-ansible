@@ -1,0 +1,13 @@
+---
+- name: Working with loops in Ansible
+  hosts: ansible1.example.com
+  vars:
+    my_list:
+      - item1: He llegado el primero
+      - item2: He llegado el segundo
+      - item3: He llegado el último
+  tasks:    
+    - name: Show all positions
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ my_list }}"
