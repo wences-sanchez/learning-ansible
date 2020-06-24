@@ -1,0 +1,10 @@
+---
+- name: Create a user using vault
+  hosts: all
+  vars_files:
+    - secret.yml
+  tasks:
+    - name: Creating user
+      user:
+        name: "{{ username }}"
+        password: "{{ password }}"
