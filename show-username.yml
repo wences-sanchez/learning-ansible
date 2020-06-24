@@ -1,0 +1,9 @@
+---
+- name: Show the username
+  hosts: ansible1.example.com
+  vars:
+    username: Wenceslao Sánchez Pino
+  tasks:
+    - name: Print who I am
+      debug: 
+        msg: Hola, soy {{ username }}
